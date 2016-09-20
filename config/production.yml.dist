@@ -1,0 +1,2 @@
+kindlegen:
+    path: "%main_directory_path%/bin/kindlegen"

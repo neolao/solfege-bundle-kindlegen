@@ -1,0 +1,23 @@
+services:
+    # Main service
+    kindlegen:
+        class: "Kindlegen"
+        arguments:
+            - "%kindlegen.path%"
+            - "@epub_manga"
+
+    # Execute kindlegen
+    kindlegen_execute:
+        class: "Command/ExecuteCommand"
+        arguments:
+            - "@kindlegen"
+        tags:
+            - { name: "solfege.console.command" }
+
+    # Convert manga
+    kindlegen_convert_manga:
+        class: "Command/ConvertMangaCommand"
+        arguments:
+            - "@kindlegen"
+        tags:
+            - { name: "solfege.console.command" }
