@@ -1,3 +1,5 @@
+import EpubMangaBundle from "solfegejs-epub-manga";
+
 /**
  * Kindlegen wrapper
  */
@@ -18,5 +20,15 @@ export default class Bundle
     getPath()
     {
         return __dirname;
+    }
+
+    /**
+     * Install dependencies
+     *
+     * @param   {Application}   application     Solfege application
+     */
+    installDependencies(application)
+    {
+        application.addBundle(new EpubMangaBundle);
     }
 }
