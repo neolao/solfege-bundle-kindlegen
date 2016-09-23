@@ -36,7 +36,6 @@ export default class Kindlegen
 
         try {
             let result = yield exec(command);
-            console.log(result);
         } catch (error) {
             console.error(error.stdout);
         }
@@ -68,7 +67,5 @@ export default class Kindlegen
 
         // Delete temporary directory
         yield remove(tempDirectory);
-
-        console.log(`Generated file: ${generatedFilePath}`);
     }
 }

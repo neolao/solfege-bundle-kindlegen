@@ -1,2 +1,4 @@
-# solfege-bundle-kindlegen
+solfegejs-kindlegen
+===================
+
 Kindlegen wrapper for SolfegeJS
